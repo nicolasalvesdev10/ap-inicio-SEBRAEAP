@@ -1,0 +1,41 @@
+*{
+    margin:0px;
+    padding:0px;
+    font-family:'poppins', sans-serif;
+    text-shadow: #808080 1px 1px;
+}
+
+body{
+    background: linear-gradient( #6a8aff, #b2fbff);
+    min-height:100vh;
+}
+
+h1{
+    margin-left: 270px;
+}
+.first-title{
+    padding-top: 200px;    /* Espaço no topo da página */
+    padding-bottom: 0px;
+}
+
+.grid-container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 250px);
+    gap:20px;
+    padding:40px;
+    max-width: 1200px;
+    margin:150px;
+    margin:-25px;
+    margin-left: 250px;
+}
+
+.item-image{
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do item */
+    max-height: 80%; /* Garante que a imagem não ultrapasse a altura do item (ajuste se precisar de mais espaço para texto) */
+    object-fit: contain; /* Redimensiona a imagem para caber sem cortar */
+    margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+    border-radius: 8px;
+}
+
+
