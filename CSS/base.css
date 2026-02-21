@@ -1,0 +1,17 @@
+/* GLOBAL STYLES */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Segoe UI", "Tahoma", "Helvetica Neue", sans-serif;
+    font-weight: lighter;
+    color: #454343;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#6a8aff, #b2fbff);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-height: 100vh;
+}

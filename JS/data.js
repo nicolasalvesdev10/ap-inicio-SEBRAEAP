@@ -1,4 +1,4 @@
-// 1. LISTAS DE DADOS (Organizadas por categoria)
+// 1. Dados dos Sistemas (Mantidos conforme seu código)
 const sistemasSebraeAmapa = [
     { nome: "Sebrae tec", img: "sebraetec.png", link: "#" },
     { nome: "Reserva de salas", img: "reservasalas.png", link: "#" },
@@ -43,61 +43,3 @@ const sistemasSebraeNacional = [
     { nome: "Tv Sebrae", img: "tvsebrae.png", link: "#" },
     { nome: "SGF", img: "sgf.png", link: "#" }
 ];
-
-// 2. FUNÇÃO DE RENDERIZAÇÃO
-function renderizarSistemas(lista, containerId) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-
-    container.innerHTML = lista.map(item => `
-        <div class="image-item">
-            <a href="${item.link}" target="_blank">
-                <img src="assets/${item.img}" alt="${item.nome}">
-            </a>
-        </div>
-    `).join('');
-}
-
-// 3. INICIALIZAÇÃO (Cria os elementos antes de configurar o slide)
-renderizarSistemas(sistemasSebraeAmapa, 'grid-sebrae-amapa');
-renderizarSistemas(sistemasInteligenciaDados, 'grid-ia-dados');
-renderizarSistemas(sistemasSebraeNacional, 'grid-sebrae-nacional');
-
-// 4. LÓGICA DO SLIDE
-const wrapper = document.getElementById('slide-wrapper');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-
-let index = 0;
-
-function moveSlide() {
-    wrapper.style.transform = `translateX(-${index * 100}vw)`;
-
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === index);
-    });
-
-    prevBtn.style.opacity = index === 0 ? "0.3" : "1";
-    prevBtn.style.cursor = index === 0 ? "not-allowed" : "pointer";
-
-    nextBtn.style.opacity = index === slides.length - 1 ? "0.3" : "1";
-    nextBtn.style.cursor = index === slides.length - 1 ? "not-allowed" : "pointer";
-}
-
-nextBtn.addEventListener('click', () => {
-    if (index < slides.length - 1) {
-        index++;
-        moveSlide();
-    }
-});
-
-prevBtn.addEventListener('click', () => {
-    if (index > 0) {
-        index--;
-        moveSlide();
-    }
-});
-
-// Estado inicial
-moveSlide();
