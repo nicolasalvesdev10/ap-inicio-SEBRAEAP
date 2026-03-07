@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sebrae/AP - Acesso aos Sistemas do SEBRAE</title>
+
+    <link rel="icon" type="image/png" href="assets/logosebrae.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/base.css">
+    <link rel="stylesheet" href="CSS/layout.css">
+    <link rel="stylesheet" href="CSS/components.css">
+    <link rel="stylesheet" href="CSS/monument.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <nav class="top-nav-bar">
+        <div class="brand-group">
+            <img src="ASSETS/logosebrae/sebrae-logo.png" alt="logo-sebrae" class="logo-sebrae">
+            <span class="logo-workspace-separator"> | </span>
+            <div class="ap-spacer">
+                <div class="ap-lines">
+                    <span class="line-green"></span>
+                    <span class="line-yellow"></span>
+                    <span class="line-red"></span>
+                </div>
+               
+            </div>
+        </div>
+        
+    <div class="top-bar-center">
+    <div id="greeting-row">
+        <span id="welcome-icon"></span>
+        <span id="saudacao-texto"></span>
+    </div>
+
+    <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
+        <div class="search-input-wrapper">
+            <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome" class="chrome-icon">
+            <input type="text" name="q" id="search-input" autocomplete="off" placeholder="O QUE VAMOS BUSCAR?">
+        </div>
+    </form>
+</div>
+        <div class="top-bar-datetime">
+            <span class="datetime-group">
+                <i class="fa-regular fa-calendar-days"></i>
+                <span id="date-text">carregando...</span>
+            </span>
+
+            <span class="datetime-separator">|</span>
+
+            <span class="datetime-group">
+                <i class="fa-regular fa-clock"></i>
+                <span id="hour">00:00</span>
+            </span>
+        </div>
+    </nav>
+
+    <!-- Botões para navegação entre os slides -->
+
+    <div class="sub-nav-buttons-top-bar">
+        <button class="top-button nav-btn" onclick="goToSlide(0)">Sistemas Sebrae Amapá</button>
+        <button class="top-button nav-btn" onclick="goToSlide(1)">Inteligência Artificial e de Dados</button>
+        <button class="top-button nav-btn" onclick="goToSlide(2)">Sistemas Sebrae Nacional</button>
+    </div>
+
+    <main>
+        <div class="slide-container">
+            <div class="slide-wrapper" id="slide-wrapper">
+
+                <section class="slide active">
+                    <div class="marco-zero-container">
+                        <div class="monumento">
+                            <div class="topo-retangulo-fundo"></div>
+                            <div class="topo-retangulo"></div>
+                            <div class="circulo-vazado"></div>
+                            <div class="linha-equador"></div>
+                        </div>
+                    </div>
+
+                    <header class="main-title">
+                        <h1 id="title1">Sistemas Sebrae Amapá</h1>
+                    </header>
+                    <div class="grid-container" id="grid-sebrae-amapa"></div>
+                </section>
+
+                <section class="slide">
+                    <header class="main-title">
+                        <h1 id="title2">Inteligência Artificial e de Dados</h1>
+                    </header>
+                    <div class="grid-container" id="grid-ia-dados"></div>
+                </section>
+
+                <section class="slide">
+                    <div class="marco-zero-container-2">
+                        <div class="monumento-2">
+                            <div class="topo-retangulo-fundo-2"></div>
+                            <div class="topo-retangulo-2"></div>
+                            <div class="circulo-vazado-2"></div>
+                            <div class="linha-equador-2"></div>
+                        </div>
+                    </div>
+                    <header class="main-title">
+                        <h1 id="first-title">Sistemas Sebrae Nacional</h1>
+                    </header>
+                    <div class="grid-container" id="grid-sebrae-nacional"></div>
+                </section>
+
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <button id="prevBtn">Anterior</button>
+            <button id="nextBtn">Próximo</button>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 Sebrae Amapá | Unidade de Tecnologia da Informação e Comunicação (UTIC)</p>
+        </div>
+    </main>
+
+    <script src="JS/data.js"></script>
+    <script src="JS/ui.js"></script>
+    <script src="JS/carousel.js"></script>
+    <script src="./JS/main.js"></script>
+</body>
+</html>
