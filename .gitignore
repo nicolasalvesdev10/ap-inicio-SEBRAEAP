@@ -1,0 +1,23 @@
+# --- Arquivos de Sistema ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Configurações de Editores (VS Code, Sublime, IntelliJ) ---
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Logs e Cache ---
+*.log
+npm-debug.log*
+.eslintcache
+
+# --- Dependências e Build (Prevenção para o futuro) ---
+node_modules/
+dist/
+build/
+
+# --- Arquivos de ambiente/segredo ---
+.env
